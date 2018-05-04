@@ -8,11 +8,11 @@ echo "root permissions required for using shred on entire devices and for reform
 for drive in ` df | grep /dev/sd | awk '{ variable = sprintf("%-.8s", $1); print variable}' | uniq`
 do
   echo "Overwrite $drive with 0s:"
-  #shred -fvz -n 0 $drive
-  #unmount 
+  shred -fvz -n 0 $drive
+  unmount
   umount `df | grep $drive | awk '{print $6}'`
-  #parted $drive mklabel msdos
-  #parted $drive mkpart primary fat32 0% 100%
-  #mkfs -t vfat $drive1
+  parted $drive mklabel msdos
+  parted $drive mkpart primary fat32 0% 100%
+  mkfs -t vfat "$drive""1"
 done
 
