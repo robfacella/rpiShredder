@@ -4,13 +4,13 @@ Shred all USB drives attached to a Raspberry Pi.
 Information Security is a valuable thing.  
 I had an idle Rasperry Pi 3, so I decided to put it to use as a USB-Sanitizer. 
 
-Generates a list of /dev/sd* devices. 
-Iterates only over unique entries. (Entire storage volumes rather than individual partitions.) 
-Writes nulls to all bits on a disk. 
-Unmounts disk. 
-Creates an msdos label for the volume. 
-Creates a new, single, FAT32 partition occuping the whole writable disk.  
-Generates a vfat file system on the disk. 
+Generates a list of /dev/sd* devices.  
+Iterates only over unique entries. (Entire storage volumes rather than individual partitions.)  
+Writes nulls to all bits on a disk.  
+Unmounts disk.  
+Creates an msdos label for the volume.  
+Creates a new, single, FAT32 partition occuping the whole writable disk.   
+Generates a vfat file system on the disk.  
 
 Device is ready for safe removal and is ready for general use.
 
