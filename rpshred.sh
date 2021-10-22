@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+start=`date +%s`
 echo "Be very careful."
 echo "This program is designed to run shred over all USB devices attached to a Raspberry Pi. (All /dev/sd* devices.)"
 echo "Do not run this if you do not understand what it does or how it works."
@@ -15,4 +16,8 @@ do
   parted $drive mkpart primary fat32 0% 100%
   mkfs -t vfat "$drive""1"
 done
+
+end=`date +%s`
+runtime=$((end-start))
+echo "Total Runtime in seconds: $runtime"
 
