@@ -18,7 +18,7 @@ Notes:
 Due to the Rasperry Pi's limited processing power, I have written the script to only do the final pass of shred. That being overwriting all bits to zero.
 
 This script shreds all /dev/sd* devices.  
-The Raspberry Pi's main storage is not /dev/sda.  
+The Raspberry Pi's main storage (assuming you are booting from an SD Card) is not /dev/sda.  
 If you ran this on a desktop you would shred your hard drive, so don't do that. 
 
 I am not responsible for data-loss due to the misuse of this program.  
